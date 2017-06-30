@@ -3,12 +3,10 @@ import java.util.ArrayList;
 
 class Event {
   private int mNumberOfGuests;
-  private String[] mFoodMenu = {"Salmon Burgers", "Tortilla Pizza", "Cod with a Crab and Herb Crust", "Chermoula Chicken", "Mango Lime Tarts", "Cherry Crumble", "Classic New York Cheesecake", "Raspberry Crisp", "Lavender Cake"};
-  private String[] mBeveragesMenu = {"Coffee", "Tea", "Wine", "Soda","Full Bar"};
-  private String[] mEntertainmentMenu = {"Live Band", "Games", "Dancing"};
-  //private List<String> mFood;
-  //private List<String> mBeverages;
-  //private List<String> mEntertainment;
+  // private String[] mFoodMenu = {"Salmon Burgers", "Tortilla Pizza", "Cod with a Crab and Herb Crust", "Chermoula Chicken", "Mango Lime Tarts", "Cherry Crumble", "Classic New York Cheesecake", "Raspberry Crisp", "Lavender Cake"};
+  // private String[] mBeveragesMenu = {"Coffee", "Tea", "Wine", "Soda","Full Bar"};
+  // private String[] mEntertainmentMenu = {"Live Band", "Games", "Dancing"};
+
 
   private List<String> mFood = new ArrayList<String>();
   private List<String> mBeverages = new ArrayList<String>();
@@ -18,16 +16,16 @@ class Event {
     return mNumberOfGuests;
   }
 
-  public String[] getFoodMenu() {
-    return mFoodMenu;
+  public List<String> getFood() {
+    return mFood;
   }
 
-  public String[] beveragesMenu() {
-    return mBeveragesMenu;
+  public List<String> getBeverages() {
+    return mBeverages;
   }
 
-  public String[] entertainmentMenu() {
-    return mEntertainmentMenu;
+  public List<String> getEntertainment() {
+    return mEntertainment;
   }
 
   public Event(int numberOfGuests, List<String> food, List<String> beverages, List<String> entertainment) {
@@ -49,7 +47,7 @@ class Event {
     }
 
     double costOfFoodBeveragesEntertainment = costOfFood + costOfBeverages + costOfEntertainment;
-    double totalCost = mNumberOfGuests * costOfFoodBeveragesEntertainment;
+    double totalCost = mNumberOfGuests * costOfFoodBeveragesEntertainment * 1.101;
     return totalCost;
   }
 

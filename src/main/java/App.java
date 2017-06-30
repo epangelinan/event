@@ -62,7 +62,7 @@ public class App {
       userEntertainmentMenu.add("None");
     }
 
-    System.out.println(userEntertainmentMenu);
+    //System.out.println(userEntertainmentMenu);
 
     Event userEvent = new Event(numOfGuests, userFoodMenu, userBeverageMenu, userEntertainmentMenu);
 
@@ -95,5 +95,28 @@ public class App {
 
     double totalUserCost = userEvent.calculateCost();
     System.out.println(String.format("The total cost is $%.2f",totalUserCost));
+
+    System.out.println("");
+    System.out.println("We have a couple of offers with the following coupons:");
+    System.out.println("Coupon Code: 0909HalfOff:  50% off the full price");
+    System.out.println("Coupon Code: 0315Special:  25% off for a party of over 25 guests");
+
+
+    System.out.println("Would you like to use a coupon?  Please enter Yes or No");
+    userChoice = myConsole.readLine();
+    if (userChoice.equals("Yes")) {
+      System.out.println("Please enter the coupon code.");
+      userChoice = myConsole.readLine();
+      if (userChoice.equals("0909HalfOff")) {
+        totalUserCost = totalUserCost * 0.5;
+      } else if ((userChoice.equals("0315Special") && userEvent.getNumberOfGuests() > 25)) {
+        totalUserCost = totalUserCost * 0.75;
+      } else {
+      System.out.println("Sorry, that code is not valid");
+      }
+    }
+
+    System.out.println(String.format("The final cost is $%.2f",totalUserCost));
+
   }
 }
