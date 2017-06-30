@@ -3,11 +3,6 @@ import java.util.ArrayList;
 
 class Event {
   private int mNumberOfGuests;
-  // private String[] mFoodMenu = {"Salmon Burgers", "Tortilla Pizza", "Cod with a Crab and Herb Crust", "Chermoula Chicken", "Mango Lime Tarts", "Cherry Crumble", "Classic New York Cheesecake", "Raspberry Crisp", "Lavender Cake"};
-  // private String[] mBeveragesMenu = {"Coffee", "Tea", "Wine", "Soda","Full Bar"};
-  // private String[] mEntertainmentMenu = {"Live Band", "Games", "Dancing"};
-
-
   private List<String> mFood = new ArrayList<String>();
   private List<String> mBeverages = new ArrayList<String>();
   private List<String> mEntertainment = new ArrayList<String>();

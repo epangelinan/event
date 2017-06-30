@@ -11,7 +11,6 @@ public class App {
     System.out.println("How many guests will be attending?");
     int numOfGuests = Integer.parseInt(myConsole.readLine());
 
-
     boolean programRunning = true;
     List<String> userFoodMenu = new ArrayList<String>();
     List<String> userBeverageMenu = new ArrayList<String>();
@@ -29,7 +28,7 @@ public class App {
       }
     }
 
-    System.out.println(userFoodMenu);
+    //System.out.println(userFoodMenu);
 
     programRunning = true;
     while(programRunning) {
@@ -42,7 +41,7 @@ public class App {
       }
     }
 
-    System.out.println(userBeverageMenu);
+    //System.out.println(userBeverageMenu);
 
     System.out.println("Would you like to add entertainment to your party? Please enter Yes or No");
     String entertainmentAnswer = myConsole.readLine();
@@ -100,7 +99,6 @@ public class App {
     System.out.println("We have a couple of offers with the following coupons:");
     System.out.println("Coupon Code: 0909HalfOff:  50% off the full price");
     System.out.println("Coupon Code: 0315Special:  25% off for a party of over 25 guests");
-
 
     System.out.println("Would you like to use a coupon?  Please enter Yes or No");
     userChoice = myConsole.readLine();
