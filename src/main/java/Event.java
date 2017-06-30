@@ -30,30 +30,27 @@ class Event {
     return mEntertainmentMenu;
   }
 
-
-
   public Event(int numberOfGuests, List<String> food, List<String> beverages, List<String> entertainment) {
     mNumberOfGuests = numberOfGuests;
-    String indexFood;
-    String indexBeverages;
-    String indexEntertainment;
     mFood.addAll(food);
     mBeverages.addAll(beverages);
     mEntertainment.addAll(entertainment);
-
-    // for (Integer index = 0 ; index < food.length; index++) {
-    //   indexFood = food[index];
-    //   mFood[index] = indexFood;
-    // }
-    //
-    // for (Integer index = 0 ; index < beverages.length; index++) {
-    //   indexBeverages = beverages[index];
-    //   mBeverages[index] = indexBeverages;
-    // }
-    //
-    // for (Integer index = 0 ; index < entertainment.length; index++) {
-    //   indexEntertainment= entertainment[index];
-    //   mEntertainment[index] = indexEntertainment;
-    // }
   }
+
+  public double calculateCost() {
+    double costOfEntertainment;
+    double costOfFood = 10.50 * mFood.size();
+    double costOfBeverages = 2.00 * mBeverages.size();
+
+    if (mEntertainment.equals("None")) {
+      costOfEntertainment = 0.00;
+    } else {
+      costOfEntertainment = 15.00 * mEntertainment.size();
+    }
+
+    double costOfFoodBeveragesEntertainment = costOfFood + costOfBeverages + costOfEntertainment;
+    double totalCost = mNumberOfGuests * costOfFoodBeveragesEntertainment;
+    return totalCost;
+  }
+
 }

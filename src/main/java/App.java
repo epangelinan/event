@@ -92,5 +92,8 @@ public class App {
       System.out.println(individualEntertainment);
     }
     System.out.println("");
+
+    double totalUserCost = userEvent.calculateCost();
+    System.out.println(String.format("The total cost is $%.2f",totalUserCost));
   }
 }
