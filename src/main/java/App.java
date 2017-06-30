@@ -15,7 +15,6 @@ public class App {
     List<String> userFoodMenu = new ArrayList<String>();
     List<String> userBeverageMenu = new ArrayList<String>();
     List<String> userEntertainmentMenu = new ArrayList<String>();
-
     String userChoice;
 
     while(programRunning) {
@@ -73,21 +72,21 @@ public class App {
 
     System.out.println("Food Menu");
     System.out.println("---------");
-    for (String individualFood: userFoodMenu) {
+    for (String individualFood: userEvent.getFood()) {
       System.out.println(individualFood);
     }
     System.out.println("");
 
     System.out.println("Beverages Menu");
     System.out.println("--------------");
-    for (String individualBeverage: userBeverageMenu) {
+    for (String individualBeverage: userEvent.getBeverages()) {
       System.out.println(individualBeverage);
     }
     System.out.println("");
 
     System.out.println("Entertainment");
     System.out.println("-------------");
-    for (String individualEntertainment: userEntertainmentMenu) {
+    for (String individualEntertainment: userEvent.getEntertainment()) {
       System.out.println(individualEntertainment);
     }
     System.out.println("");
